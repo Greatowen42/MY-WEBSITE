@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lean Table Recipes — High-Protein, Low-Calorie Meal Prep</title>
+<meta name="description" content="Budget-friendly, high-protein meal prep recipes under 400 calories. Batch-cook once, eat well all week — no guesswork on macros.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%97%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Lean Table Recipes — High-Protein, Low-Calorie Meal Prep">
+<meta property="og:description" content="Budget-friendly, high-protein meal prep recipes under 400 calories. Batch-cook once, eat well all week.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" id="site-header">
+  <div class="nav-wrap">
+    <a href="#" class="logo">Lean Table <span>Recipes</span></a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#high-protein" data-section="high-protein" class="nav-link active">High-Protein</a>
+      <a href="#low-calorie" data-section="low-calorie" class="nav-link">Low-Calorie</a>
+      <a href="#prep-30-min" data-section="prep-30-min" class="nav-link">30-Min Prep</a>
+      <a href="#macro-snacks" data-section="macro-snacks" class="nav-link">Macro Snacks</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#recipe-card" class="jump-btn">Jump to Recipe</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#high-protein" data-section="high-protein" class="nav-link active">High-Protein</a>
+    <a href="#low-calorie" data-section="low-calorie" class="nav-link">Low-Calorie</a>
+    <a href="#prep-30-min" data-section="prep-30-min" class="nav-link">30-Min Prep</a>
+    <a href="#macro-snacks" data-section="macro-snacks" class="nav-link">Macro Snacks</a>
+    <a href="#recipe-card" class="jump-btn mobile-jump">Jump to Recipe</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Meal prep that actually fits your macros.</h1>
+    <p>High-protein, low-calorie recipes built for real weeks — no guesswork, no mystery calories.</p>
+  </div>
+</section>
+
+<!-- Above-the-fold ad slot -->
+<div class="ad-slot ad-slot--leaderboard">Advertisement — Responsive Banner</div>
+
+
+<!-- ============ HIGH-PROTEIN ============ -->
+<section id="high-protein" class="category-section">
+  <h2>High-Protein</h2>
+  <div class="card-grid">
+    <article class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500&q=80" alt="Chicken and rice bowl">
+      <div class="card-body">
+        <span class="tag">38g protein</span>
+        <h3>Chicken &amp; Rice Power Bowl</h3>
+        <p>20 min · 450 cal</p>
+      </div>
+    </article>
+    <article class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=80" alt="Turkey meatballs">
+      <div class="card-body">
+        <span class="tag">34g protein</span>
+        <h3>Turkey Meatball Prep</h3>
+        <p>30 min · 410 cal</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ LOW-CALORIE ============ -->
+<section id="low-calorie" class="category-section alt">
+  <h2>Low-Calorie</h2>
+  <div class="card-grid">
+    <article class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&q=80" alt="Salmon and vegetables">
+      <div class="card-body">
+        <span class="tag">320 cal</span>
+        <h3>Sheet Pan Salmon &amp; Veg</h3>
+        <p>25 min</p>
+      </div>
+    </article>
+    <article class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=80" alt="Chicken salad cups">
+      <div class="card-body">
+        <span class="tag">280 cal</span>
+        <h3>Greek Yogurt Chicken Cups</h3>
+        <p>15 min</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 30-MIN PREP ============ -->
+<section id="prep-30-min" class="category-section">
+  <h2>30-Min Prep</h2>
+  <div class="card-grid">
+    <article class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=80" alt="Turkey chili">
+      <div class="card-body">
+        <span class="tag">Freezer-friendly</span>
+        <h3>One-Pot Turkey Chili</h3>
+        <p>30 min · 6 servings</p>
+      </div>
+    </article>
+    <article class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=80" alt="Beef and sweet potato bowl">
+      <div class="card-body">
+        <span class="tag">Budget pick</span>
+        <h3>Beef &amp; Sweet Potato Bowls</h3>
+        <p>28 min</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ MACRO SNACKS ============ -->
+<section id="macro-snacks" class="category-section alt">
+  <h2>Macro Snacks</h2>
+  <div class="card-grid">
+    <article class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=500&q=80" alt="Protein energy bites">
+      <div class="card-body">
+        <span class="tag">12g protein</span>
+        <h3>Peanut Butter Protein Bites</h3>
+        <p>10 min · makes 12</p>
+      </div>
+    </article>
+    <article class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500&q=80" alt="Cottage cheese bowl">
+      <div class="card-body">
+        <span class="tag">18g protein</span>
+        <h3>Sweet Cottage Cheese Bowl</h3>
+        <p>5 min</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ LATEST FROM THE BLOG ============ -->
+<section id="latest-posts" class="category-section">
+  <h2>Latest From the Blog</h2>
+  <div class="card-grid">
+    <a href="15-high-protein-breakfast-meal-preps.html" class="recipe-card-link">
+      <article class="recipe-card">
+        <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500&q=80" alt="High-protein breakfast meal prep containers">
+        <div class="card-body">
+          <span class="tag">15 recipes</span>
+          <h3>15 High-Protein Breakfast Meal Preps Under 400 Calories</h3>
+          <p>20g+ protein, under 400 cal, built for real mornings</p>
+        </div>
+      </article>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FEATURED RECIPE (Jump to Recipe target) ============ -->
+<section id="recipe-card" class="recipe-detail">
+  <article>
+    <header class="recipe-header">
+      <h1>Garlic Butter Steak &amp; Broccoli Rice Bowls</h1>
+      <p class="meta">Prep: 15 min · Cook: 20 min · Serves: 4</p>
+
+      <div class="macro-grid">
+        <div class="macro-badge">
+          <span class="macro-value">420</span>
+          <span class="macro-label">Calories</span>
+        </div>
+        <div class="macro-badge">
+          <span class="macro-value">48g</span>
+          <span class="macro-label">Protein</span>
+        </div>
+        <div class="macro-badge">
+          <span class="macro-value">12g</span>
+          <span class="macro-label">Carbs</span>
+        </div>
+        <div class="macro-badge">
+          <span class="macro-value">18g</span>
+          <span class="macro-label">Fat</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="recipe-story">
+      <p>Seared steak bites finished in garlic butter, spooned over broccoli rice — this is the bowl we reach for when the week has been long and the fridge needs to earn its keep. It comes together in one pan, holds up well through four days of reheats, and hits a protein number that actually keeps you full.</p>
+      <p>Swap the broccoli rice for regular rice or cauliflower rice depending on what you're working with. The garlic butter is the part worth not skipping — it's what turns a plain seared steak into something you'd order at a restaurant.</p>
+    </section>
+
+    <div class="ad-slot">Advertisement — In-Article (300×250 / Responsive)</div>
+
+    <section class="recipe-ingredients">
+      <h2>Ingredients</h2>
+      <ul class="ingredient-list">
+        <li>1.5 lb sirloin steak, cut into bite-sized pieces</li>
+        <li>3 cups broccoli, riced (fresh or frozen)</li>
+        <li>4 tbsp butter, divided</li>
+        <li>5 cloves garlic, minced</li>
+        <li>1 tbsp olive oil</li>
+        <li>1 tsp smoked paprika</li>
+        <li>Salt and black pepper, to taste</li>
+        <li>2 tbsp chopped parsley, for serving</li>
+      </ul>
+    </section>
+
+    <section class="recipe-instructions">
+      <h2>Instructions</h2>
+      <ol class="instructions">
+        <li>Pat the steak pieces dry and season with salt, pepper, and smoked paprika.</li>
+        <li>Heat olive oil in a large skillet over high heat. Sear the steak in a single layer, 2–3 minutes per side, until browned. Remove and set aside.</li>
+        <li>Lower the heat to medium. Add 2 tbsp butter and the garlic, and cook for 30 seconds until fragrant.</li>
+        <li>Return the steak to the pan, toss to coat in the garlic butter, and cook 1 more minute. Remove from heat.</li>
+        <li>In a separate pan, sauté the broccoli rice with the remaining 2 tbsp butter for 4–5 minutes until just tender.</li>
+        <li>Divide the broccoli rice across containers, top with the garlic butter steak, and finish with chopped parsley.</li>
+      </ol>
+    </section>
+  </article>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="logo footer-logo">Lean Table <span>Recipes</span></span>
+    <nav class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ============ COOKIE CONSENT BANNER (GDPR/CCPA placeholder) ============ -->
+<div id="cookie-consent" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+  <p>We use cookies to personalize content and analyze traffic, including for advertising purposes. See our <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+  <div class="cookie-actions">
+    <button id="cookie-accept" class="cookie-btn cookie-btn--accept">Accept</button>
+    <button id="cookie-decline" class="cookie-btn cookie-btn--decline">Decline</button>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Garlic Butter Steak & Broccoli Rice Bowls",
+  "image": ["https://images.unsplash.com/photo-1546833999-b9f581a1996d"],
+  "author": { "@type": "Organization", "name": "Lean Table Recipes" },
+  "description": "Seared steak bites finished in garlic butter, served over broccoli rice. A high-protein meal prep bowl that holds up through four days of reheats.",
+  "prepTime": "PT15M",
+  "cookTime": "PT20M",
+  "totalTime": "PT35M",
+  "recipeYield": "4 servings",
+  "recipeCategory": "High Protein",
+  "recipeCuisine": "American",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "420 calories",
+    "proteinContent": "48 g",
+    "carbohydrateContent": "12 g",
+    "fatContent": "18 g"
+  },
+  "recipeIngredient": [
+    "1.5 lb sirloin steak, cut into bite-sized pieces",
+    "3 cups broccoli, riced (fresh or frozen)",
+    "4 tbsp butter, divided",
+    "5 cloves garlic, minced",
+    "1 tbsp olive oil",
+    "1 tsp smoked paprika",
+    "Salt and black pepper, to taste",
+    "2 tbsp chopped parsley, for serving"
+  ],
+  "recipeInstructions": [
+    { "@type": "HowToStep", "text": "Pat the steak pieces dry and season with salt, pepper, and smoked paprika." },
+    { "@type": "HowToStep", "text": "Heat olive oil in a large skillet over high heat. Sear the steak in a single layer, 2–3 minutes per side, until browned. Remove and set aside." },
+    { "@type": "HowToStep", "text": "Lower the heat to medium. Add 2 tbsp butter and the garlic, and cook for 30 seconds until fragrant." },
+    { "@type": "HowToStep", "text": "Return the steak to the pan, toss to coat in the garlic butter, and cook 1 more minute. Remove from heat." },
+    { "@type": "HowToStep", "text": "In a separate pan, sauté the broccoli rice with the remaining 2 tbsp butter for 4–5 minutes until just tender." },
+    { "@type": "HowToStep", "text": "Divide the broccoli rice across containers, top with the garlic butter steak, and finish with chopped parsley." }
+  ]
+}
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

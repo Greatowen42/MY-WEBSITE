@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Lean Table Recipes</title>
+<meta name="description" content="The story behind Lean Table Recipes — budget-friendly, high-protein meal prep built for real weeks.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%97%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">Lean Table <span>Recipes</span></a>
+    <nav class="nav-links">
+      <a href="index.html#high-protein" class="nav-link">High-Protein</a>
+      <a href="index.html#low-calorie" class="nav-link">Low-Calorie</a>
+      <a href="index.html#prep-30-min" class="nav-link">30-Min Prep</a>
+      <a href="index.html#macro-snacks" class="nav-link">Macro Snacks</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="index.html#recipe-card" class="jump-btn">Jump to Recipe</a>
+    </div>
+  </div>
+</header>
+
+<main class="legal-container">
+  <h1>About Lean Table Recipes</h1>
+  <p class="updated">Our story</p>
+
+  <p>Lean Table Recipes started out of necessity, not inspiration. Between coursework, deadlines, and a handful of side projects running at once, there was never enough time in a day to think about food — but skipping meals or living on instant noodles wasn't sustainable either. So the question became: what's the fastest path to a meal that's actually good for you, doesn't cost a fortune, and doesn't taste like punishment?</p>
+
+  <p>That question turned into a habit of batch-cooking on whatever one free afternoon was available each week — measuring things, timing things, writing down what worked and what didn't. Friends started asking for the recipes. Then it made sense to just put them somewhere everyone could find them.</p>
+
+  <h2>What We Do</h2>
+  <p>Every recipe here is built around a clear macro target first, flavor second — but never flavor last. If a recipe doesn't hold up by day three or four in the fridge, it doesn't make the site. We'd rather publish fifteen recipes that actually work for a real week than fifty that only look good in a photo.</p>
+
+  <h2>Our Approach</h2>
+  <ul>
+    <li>High-protein first — recipes are built to hit a meaningful protein number per serving, not just squeeze one in.</li>
+    <li>Budget-aware — every recipe accounts for real grocery costs, not just what photographs well.</li>
+    <li>Batch-friendly — built to scale for a full week, tested past day one in the fridge.</li>
+  </ul>
+
+  <hr>
+  <p>Have a question or a recipe request? Visit our <a href="contact.html">Contact page</a>.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="logo footer-logo">Lean Table <span>Recipes</span></span>
+    <nav class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</footer>
+
+<div id="cookie-consent" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+  <p>We use cookies to personalize content and analyze traffic, including for advertising purposes. See our <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+  <div class="cookie-actions">
+    <button id="cookie-accept" class="cookie-btn cookie-btn--accept">Accept</button>
+    <button id="cookie-decline" class="cookie-btn cookie-btn--decline">Decline</button>
+  </div>
+</div>
+
+<script>
+  const cb = document.getElementById('cookie-consent');
+  const ca = document.getElementById('cookie-accept');
+  const cd = document.getElementById('cookie-decline');
+  if (cb && !localStorage.getItem('ltr-cookie-consent')) cb.hidden = false;
+  ca?.addEventListener('click', () => { localStorage.setItem('ltr-cookie-consent','accepted'); cb.hidden = true; });
+  cd?.addEventListener('click', () => { localStorage.setItem('ltr-cookie-consent','declined'); cb.hidden = true; });
+</script>
+</body>
+</html>

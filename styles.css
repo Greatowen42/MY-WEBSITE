@@ -1,0 +1,493 @@
+/* ================= THEME TOKENS ================= */
+:root {
+  --color-primary: #4A7C59;        /* Sage green — primary accent */
+  --color-primary-dark: #375D42;
+  --color-secondary: #D96B43;      /* Terracotta — secondary accent */
+  --color-bg: #FAF6EF;             /* Warm cream */
+  --color-card: #F3EEE3;
+  --color-text: #2B2A26;
+  --color-text-muted: #6B655C;
+  --header-height: 64px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+h1, h2, h3, .logo {
+  font-family: 'Sora', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+/* ================= HEADER / NAV ================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 246, 239, 0.96);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.nav-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: var(--header-height);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.logo span { color: var(--color-secondary); }
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  background: rgba(74, 124, 89, 0.1);
+  color: var(--color-primary);
+}
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.nav-link.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+.nav-link.active:hover {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.jump-btn {
+  background: var(--color-secondary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 9px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.jump-btn:hover {
+  background: #B8532F;
+  transform: translateY(-1px);
+}
+.jump-btn:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Hamburger (mobile only) */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  background: var(--color-bg);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  transition: max-height 0.3s ease;
+}
+.mobile-nav.open {
+  max-height: 400px;
+}
+.mobile-nav .nav-link {
+  border-radius: 0;
+  padding: 14px 20px;
+}
+.mobile-jump {
+  margin: 10px 20px 16px;
+  text-align: center;
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding: 56px 20px 40px;
+  text-align: center;
+}
+.hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 14px;
+}
+.hero p {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* ================= CATEGORY SECTIONS ================= */
+.category-section {
+  padding: 48px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.category-section.alt {
+  background: var(--color-card);
+  max-width: 100%;
+}
+.category-section.alt > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.category-section h2 {
+  font-size: 1.5rem;
+  margin: 0 0 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.recipe-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.recipe-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -12px rgba(0,0,0,0.15);
+}
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.card-body {
+  padding: 16px;
+}
+.tag {
+  display: inline-block;
+  background: rgba(74, 124, 89, 0.12);
+  color: var(--color-primary-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.recipe-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 4px;
+}
+.recipe-card p {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ================= FEATURED RECIPE DETAIL ================= */
+.recipe-detail {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px 60px;
+}
+.recipe-detail h2 {
+  font-size: 1.75rem;
+  margin: 0 0 8px;
+}
+.recipe-detail .meta {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 24px;
+}
+.recipe-detail h3 {
+  font-size: 1.1rem;
+  margin: 24px 0 12px;
+}
+.ingredient-list, .instructions {
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+.ad-slot {
+  border: 1px dashed rgba(0,0,0,0.25);
+  border-radius: 8px;
+  background: rgba(0,0,0,0.03);
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 8px 0 24px;
+}
+.ad-slot--leaderboard {
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  padding: 24px 20px;
+}
+
+/* Macro badge grid */
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px 0 4px;
+}
+.macro-badge {
+  background: var(--color-card);
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+}
+.macro-value {
+  display: block;
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--color-primary-dark);
+}
+.macro-label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.recipe-header h1 {
+  font-size: 1.9rem;
+  margin: 0 0 6px;
+}
+.recipe-story {
+  margin: 24px 0;
+  line-height: 1.75;
+  font-size: 0.98rem;
+}
+.recipe-story p { margin: 0 0 14px; }
+.recipe-ingredients h2,
+.recipe-instructions h2 {
+  font-size: 1.1rem;
+  margin: 24px 0 12px;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: var(--color-primary-dark);
+  color: rgba(255,255,255,0.85);
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-logo { color: #fff; }
+.footer-logo span { color: #F2C9B4; }
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-links a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover { color: #fff; }
+
+/* ================= RESPONSIVE ================= */
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-links { display: flex; }
+  .hamburger { display: none; }
+  .mobile-nav { display: none !important; }
+  .hero h1 { font-size: 2.75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .nav-link, .jump-btn, .recipe-card, .hamburger span, .mobile-nav {
+    transition: none !important;
+  }
+}
+
+/* ================= LEGAL PAGES ================= */
+.legal-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+  line-height: 1.75;
+}
+.legal-container h1 {
+  font-size: 2rem;
+  margin: 0 0 8px;
+  color: var(--color-primary-dark);
+}
+.legal-container .updated {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 32px;
+}
+.legal-container h2 {
+  font-size: 1.25rem;
+  margin: 32px 0 12px;
+  color: var(--color-primary-dark);
+}
+.legal-container p {
+  margin: 0 0 16px;
+}
+.legal-container ul,
+.legal-container ol {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+.legal-container li {
+  margin-bottom: 8px;
+}
+.legal-container a {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+.legal-container hr {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  margin: 36px 0;
+}
+
+/* ================= COOKIE CONSENT BANNER ================= */
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--color-primary-dark);
+  color: #fff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px -8px rgba(0,0,0,0.35);
+  z-index: 100;
+}
+.cookie-banner p {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.cookie-banner a {
+  color: #F2C9B4;
+  text-decoration: underline;
+}
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+}
+.cookie-btn {
+  flex: 1;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cookie-btn--accept {
+  background: var(--color-secondary);
+  color: #fff;
+}
+.cookie-btn--accept:hover { background: #B8532F; }
+.cookie-btn--decline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+.cookie-btn--decline:hover { background: rgba(255,255,255,0.1); }
+
+@media (min-width: 640px) {
+  .macro-grid { grid-template-columns: repeat(4, 1fr); }
+}
