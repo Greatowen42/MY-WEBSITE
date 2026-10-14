@@ -783,3 +783,79 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   .flow-blob, .flow-wave { animation: none; }
 }
+
+/* ================= HERO VIDEO ================= */
+.hero--video {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 20px 110px;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(to bottom, rgba(20,16,12,0.45), rgba(20,16,12,0.62));
+}
+.hero--video .hero-inner { max-width: 720px; }
+.hero--video h1 {
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+}
+.hero--video p {
+  color: rgba(255,255,255,0.94);
+}
+/* if the video file is missing, fall back to the flowing colors */
+.hero--novideo .hero-video,
+.hero--novideo .hero-shade { display: none; }
+.hero--novideo h1 { color: var(--color-text); text-shadow: none; }
+.hero--novideo p { color: #4A453E; }
+.hero--video .flow-wave { display: none; }
+.hero--novideo .flow-wave { display: block; }
+
+/* ================= ARTICLE BACKGROUND COLORS ================= */
+.page-flow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.page-flow span {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.3;
+  will-change: transform;
+}
+.page-flow span:nth-child(1) {
+  width: 420px; height: 420px; left: -120px; top: -100px;
+  background: var(--flow-a);
+  animation: flow-drift-a 10s ease-in-out infinite alternate;
+}
+.page-flow span:nth-child(2) {
+  width: 380px; height: 380px; right: -100px; top: 22%;
+  background: var(--flow-b);
+  animation: flow-drift-b 12s ease-in-out infinite alternate;
+}
+.page-flow span:nth-child(3) {
+  width: 360px; height: 360px; left: 30%; bottom: -160px;
+  background: var(--flow-c);
+  animation: flow-drift-c 14s ease-in-out infinite alternate;
+}
+/* each article has its own colors */
+.theme-chicken { --flow-a: #D96B43; --flow-b: #F2C14E; --flow-c: #C8553D; }
+.theme-turkey  { --flow-a: #4A7C59; --flow-b: #A8C686; --flow-c: #E5B84B; }
+.theme-breakfast { --flow-a: #F4A261; --flow-b: #7B8CDE; --flow-c: #F2C14E; }
+@media (prefers-reduced-motion: reduce) {
+  .page-flow span { animation: none; }
+}

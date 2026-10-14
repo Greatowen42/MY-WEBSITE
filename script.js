@@ -151,3 +151,23 @@ if (cookieBanner) {
 
   start();
 })();
+
+
+// ================= HERO VIDEO =================
+(function () {
+  const video = document.getElementById('hero-video');
+  if (!video) return;
+  const hero = video.closest('.hero');
+  const source = video.querySelector('source');
+
+  function useFallback() { hero.classList.add('hero--novideo'); }
+
+  video.addEventListener('error', useFallback);
+  if (source) source.addEventListener('error', useFallback);
+
+  // people who prefer less motion get the still poster image instead of the video
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    video.removeAttribute('autoplay');
+    video.pause();
+  }
+})();
