@@ -84,7 +84,7 @@ if (cookieBanner) {
   const dots = Array.from(root.querySelectorAll('.slider-dot'));
   const prevBtn = root.querySelector('.slider-prev');
   const nextBtn = root.querySelector('.slider-next');
-  const DELAY = 5500;
+  const DELAY = 3000;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let index = 0;
   let busy = false;
@@ -114,7 +114,7 @@ if (cookieBanner) {
     dots[index].classList.remove('is-active');
     dots[target].classList.add('is-active');
     index = target;
-    setTimeout(function () { busy = false; }, 750);
+    setTimeout(function () { busy = false; }, 550);
   }
 
   function next() { show(index + 1, 1); }
