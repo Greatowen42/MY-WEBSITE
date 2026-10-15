@@ -856,6 +856,7 @@ section[id] {
 .theme-chicken { --flow-a: #D96B43; --flow-b: #F2C14E; --flow-c: #C8553D; }
 .theme-turkey  { --flow-a: #4A7C59; --flow-b: #A8C686; --flow-c: #E5B84B; }
 .theme-salmon  { --flow-a: #2A9D8F; --flow-b: #F28C6F; --flow-c: #F2C14E; }
+.theme-cups    { --flow-a: #8CC63F; --flow-b: #F7DC4A; --flow-c: #BFE3D0; }
 .theme-breakfast { --flow-a: #F4A261; --flow-b: #7B8CDE; --flow-c: #F2C14E; }
 @media (prefers-reduced-motion: reduce) {
   .page-flow span { animation: none; }
