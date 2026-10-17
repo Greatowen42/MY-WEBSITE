@@ -3,3 +3,6 @@
 .macro-bar { display: inline-block; font-weight: 700; font-size: 0.95rem; color: var(--color-primary-dark); background: var(--color-card); border-radius: 999px; padding: 10px 16px; margin: 0 0 8px; }
 .recipe-storage h2, .recipe-faq h2 { font-size: 1.1rem; margin: 24px 0 12px; }
 .recipe-storage ul, .recipe-storage p, .recipe-faq p { line-height: 1.7; }
+.theme-beef { --flow-a: #D96B43; --flow-b: #4A7C59; --flow-c: #F2C14E; }
+.theme-bites { --flow-a: #C98B4B; --flow-b: #7A4A2B; --flow-c: #F2C14E; }
+.theme-cottage { --flow-a: #E5546B; --flow-b: #7B8CDE; --flow-c: #F2C14E; }
