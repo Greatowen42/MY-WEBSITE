@@ -1,0 +1,5 @@
+/* Extra styles for new recipe articles. Loaded after styles.css. */
+.theme-chili { --flow-a: #C8553D; --flow-b: #F2C14E; --flow-c: #8C3B2A; }
+.macro-bar { display: inline-block; font-weight: 700; font-size: 0.95rem; color: var(--color-primary-dark); background: var(--color-card); border-radius: 999px; padding: 10px 16px; margin: 0 0 8px; }
+.recipe-storage h2, .recipe-faq h2 { font-size: 1.1rem; margin: 24px 0 12px; }
+.recipe-storage ul, .recipe-storage p, .recipe-faq p { line-height: 1.7; }
