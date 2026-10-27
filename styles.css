@@ -861,3 +861,9 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   .page-flow span { animation: none; }
 }
+
+
+/* Three recipe cards per row on large screens */
+@media (min-width: 1024px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
