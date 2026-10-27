@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms of Service — Lean Table Recipes</title>
 <meta name="description" content="Terms of Service for Lean Table Recipes.">
+<link rel="canonical" href="https://leantablerecipes.com/terms.html">
+<meta property="og:url" content="https://leantablerecipes.com/terms.html">
+<meta property="og:site_name" content="Lean Table Recipes">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -26,9 +29,20 @@
       <a href="index.html#macro-snacks" class="nav-link">Macro Snacks</a>
     </nav>
     <div class="nav-actions">
-      <a href="index.html#recipe-card" class="jump-btn">Jump to Recipe</a>
+      <a href="index.html#high-protein" class="jump-btn">All Recipes</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html#high-protein" class="nav-link">High-Protein</a>
+    <a href="index.html#low-calorie" class="nav-link">Low-Calorie</a>
+    <a href="index.html#prep-30-min" class="nav-link">30-Min Prep</a>
+    <a href="index.html#macro-snacks" class="nav-link">Macro Snacks</a>
+    <a href="index.html#high-protein" class="jump-btn mobile-jump">All Recipes</a>
+  </nav>
 </header>
 
 <main class="legal-container">
@@ -80,13 +94,6 @@
   </div>
 </div>
 
-<script>
-  const cb = document.getElementById('cookie-consent');
-  const ca = document.getElementById('cookie-accept');
-  const cd = document.getElementById('cookie-decline');
-  if (cb && !localStorage.getItem('ltr-cookie-consent')) cb.hidden = false;
-  ca?.addEventListener('click', () => { localStorage.setItem('ltr-cookie-consent','accepted'); cb.hidden = true; });
-  cd?.addEventListener('click', () => { localStorage.setItem('ltr-cookie-consent','declined'); cb.hidden = true; });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
